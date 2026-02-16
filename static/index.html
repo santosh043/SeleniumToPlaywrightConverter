@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium to Playwright Converter</title>
+    <!-- Corrected Path: Absolute path to static directory -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google Fonts for code and UI -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>🚀 Selenium <span>→</span> Playwright</h1>
+            <span class="badge" id="status-badge">Checking connection...</span>
+        </div>
+        <div class="actions">
+            <!-- Future: Settings button -->
+        </div>
+    </header>
+
+    <main>
+        <div class="editor-container">
+            <!-- Source Pane -->
+            <div class="pane source-pane">
+                <div class="pane-header">
+                    <span class="lang-tag java">JAVA (SELENIUM)</span>
+                    <button id="btn-clear" class="text-btn">Clear</button>
+                </div>
+                <textarea id="source-code" spellcheck="false" placeholder="// Paste your Java Selenium code here...
+// Example:
+@Test
+public void login() {
+    driver.findElement(By.id('user')).sendKeys('admin');
+}"></textarea>
+            </div>
+
+            <!-- Action Area -->
+            <div class="action-gutter">
+                <button id="btn-convert" class="convert-btn" title="Convert to Playwright">
+                    <span>⚡</span>
+                </button>
+            </div>
+
+            <!-- Target Pane -->
+            <div class="pane target-pane">
+                <div class="pane-header">
+                    <span class="lang-tag ts">TYPESCRIPT (PLAYWRIGHT)</span>
+                    <button id="btn-copy" class="text-btn" disabled>Copy</button>
+                </div>
+                <div class="code-output-wrapper">
+                    <pre><code id="target-code" class="language-typescript"></code></pre>
+                    <div id="loader" class="hidden">
+                        <div class="spinner"></div>
+                        <p>Ai Converting logic...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Powered by <strong>Ollama (CodeLlama)</strong>. Local AI Execution.</p>
+    </footer>
+
+    <!-- Corrected Path -->
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
