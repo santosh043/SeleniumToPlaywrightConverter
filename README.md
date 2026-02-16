@@ -17,7 +17,7 @@ graph TD
     
     subgraph "Local Execution Environment"
         API -->|Validates| Logic[⚙️ Converter Engine]
-        Logic -->|Prompt Engineering| LLM[🦙 Ollama (CodeLlama)]
+        Logic -->|Prompt Engineering| LLM["🦙 Ollama (CodeLlama)"]
         LLM -->|Generated TS| Logic
         Logic -->|Cleaned Code| API
     end
